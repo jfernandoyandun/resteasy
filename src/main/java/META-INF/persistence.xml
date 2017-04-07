@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="RestEasyPersistenceUnit">
+        <class>ec.com.softwareevolutivo.demos.entities.Persona</class>
+        <properties>
+            <property name="eclipselink.jdbc.url" value="jdbc:postgresql://172.17.0.2:5432/rest"/>
+            <property name="eclipselink.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="eclipselink.jdbc.user" value="postgres"/>
+            <property name="eclipselink.jdbc.password" value="fer1307"/>
+        </properties>
+    </persistence-unit>
+</persistence>
