@@ -6,5 +6,4 @@
 			'ngResource',
 			'ui.bootstrap'
 		])
-		.run(run);
 })();

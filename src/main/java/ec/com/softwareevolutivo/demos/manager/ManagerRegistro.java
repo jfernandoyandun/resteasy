@@ -24,7 +24,8 @@ public class ManagerRegistro {
 	//Lista de Personas
 	@SuppressWarnings("unchecked")
 	public List<Persona> findAllPersonas(){
-		return getManager().findAll(Persona.class, "o.id");
+        List<Persona> result = getManager().findAll(Persona.class, "o.id");
+		return result;
 	}
 
 	//Insertar Personas

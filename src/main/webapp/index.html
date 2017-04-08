@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="restEasyApp">
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="js/angular.min.js"></script>
+		<script src="js/angular-resource.min.js"></script>
+		<script src="js/ui-bootstrap.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.css">
+
+		<script src="app/app.module.js"></script>
+		<script src="app/persona/presona.service.js"></script>
+		<script src="app/persona/persona.controller.js"></script>
+	</head>
+	<body ng-controller="PersonaController as vm">
+		<div class="container">
+			<h2>Angular ng-repeat demo</h2>
+			<ul class="list-inline">
+				<li ng-repeat="persona in vm.personas"> {{ persona.firstNames }} </li>
+			</ul>
+		</div>
+
+		<div class="table-responsive">
+			<table class="jh-table table table-striped">
+				<thead>
+					Lista de Personas
+				</thead>
+				<tbody>
+				<tr ng-repeat="persona in vm.personas track by persona.id">
+					<td>{{persona.id}}</td>
+					<td>{{persona.firstNames}}</td>
+					<td>{{persona.lastNames}}</td>
+					<td>{{persona.address}}</td>
+					<td>{{persona.phone}}</td>
+					<td class="text-right">
+						<div class="btn-group flex-btn-group-container">
+							<button type="submit"
+									ui-sref="location.edit({id:location.id})"
+									class="btn btn-primary btn-sm">
+								<span class="glyphicon glyphicon-pencil"></span>
+								<span class="hidden-xs hidden-sm">Editar</span>
+							</button>
+							<button type="submit"
+									ui-sref="location.delete({id:location.id})"
+									class="btn btn-danger btn-sm">
+								<span class="glyphicon glyphicon-remove-circle"></span>
+								<span class="hidden-xs hidden-sm">Eliminar</span>
+							</button>
+						</div>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

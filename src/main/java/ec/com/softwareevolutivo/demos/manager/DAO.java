@@ -25,7 +25,7 @@ public class DAO {
 	public DAO() {
 		mostrarLog(this.getClass(), "constructor", "DAO Creado");
 		if (factory == null) {
-			factory = Persistence.createEntityManagerFactory("RestEasyPersistenceUnit");
+			factory = Persistence.createEntityManagerFactory("NewPersistenceUnit");
 			mostrarLog(this.getClass(), "constructor", "Factory creado");
 		}
 		if (em == null) {

@@ -4,12 +4,13 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.io.Serializable;
 
 /**
  * Created by fernando on 4/7/17.
  */
 @Entity
-public class Persona {
+public class Persona implements Serializable{
     private int id;
     private String firstNames;
     private String lastNames;

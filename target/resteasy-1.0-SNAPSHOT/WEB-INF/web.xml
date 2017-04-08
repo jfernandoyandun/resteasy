@@ -10,7 +10,7 @@
         <servlet-class>org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher</servlet-class>
         <init-param>
             <param-name>javax.ws.rs.Application</param-name>
-            <param-value>se_examples.demo.resteasy_angularjs.SEApplication</param-value>
+            <param-value>ec.com.softwareevolutivo.demos.service.SEApplication</param-value>
         </init-param>
     </servlet>
 
@@ -20,6 +20,6 @@
     </servlet-mapping>
 
     <welcome-file-list>
-    	<welcome-file>app/index.html</welcome-file>
+    	<welcome-file>index.html</welcome-file>
     </welcome-file-list>
 </web-app>
