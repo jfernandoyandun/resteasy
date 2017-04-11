@@ -6,25 +6,32 @@
 		<script src="js/angular.min.js"></script>
 		<script src="js/angular-resource.min.js"></script>
 		<script src="js/ui-bootstrap.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="css/bootstrap.css">
-
+		<title>Tutorial RestEasy con Servlet 3.0</title>
 		<script src="app/app.module.js"></script>
 		<script src="app/persona/presona.service.js"></script>
 		<script src="app/persona/persona.controller.js"></script>
 	</head>
 	<body ng-controller="PersonaController as vm">
-		<div class="container">
-			<h2>Angular ng-repeat demo</h2>
-			<ul class="list-inline">
-				<li ng-repeat="persona in vm.personas"> {{ persona.firstNames }} </li>
-			</ul>
-		</div>
+		<h4>Lista de Personas</h4>
+		<jhi-alert></jhi-alert>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-4 no-padding-left">
+					<button class="btn btn-primary" ui-sref="location.new" >
+						<span class="glyphicon glyphicon-plus"></span>
+						<span> Crear Nueva Persona </span>
+					</button>
 
+					<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+				</div>
+			</div>
+		</div>
+		<br/>
 		<div class="table-responsive">
 			<table class="jh-table table table-striped">
-				<thead>
-					Lista de Personas
-				</thead>
 				<tbody>
 				<tr ng-repeat="persona in vm.personas track by persona.id">
 					<td>{{persona.id}}</td>
@@ -37,7 +44,7 @@
 							<button type="submit"
 									ui-sref="location.edit({id:location.id})"
 									class="btn btn-primary btn-sm">
-								<span class="glyphicon glyphicon-pencil"></span>
+								<span class="glyphicon glyphicon-envelope"></span>
 								<span class="hidden-xs hidden-sm">Editar</span>
 							</button>
 							<button type="submit"
@@ -52,5 +59,34 @@
 				</tbody>
 			</table>
 		</div>
+
+		<div class="container">
+			<h2>Basic Modal Example</h2>
+			<!-- Trigger the modal with a button -->
+
+
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Modal Header</h4>
+						</div>
+						<div class="modal-body">
+							<p>Some text in the modal.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
 	</body>
 </html>
